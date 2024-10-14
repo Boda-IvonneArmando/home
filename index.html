@@ -12088,6 +12088,11 @@
             </style>
         </noscript>
         <script nonce='a3cc5640-c6f6-4848-aa11-a963234f5ba2'>
+            const paramURL = window.location.search
+            const patametrosURL = new URLSearchParams(paramURL);
+            const codigo = parametros.get('cod');
+            console.log(codigo);
+            
             !function() {
                 "use strict";
                 function t(t, n) {
