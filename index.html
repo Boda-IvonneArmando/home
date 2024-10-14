@@ -14067,12 +14067,12 @@ n_invitacion,nombre_formal,contrasena,n_pases
                 for (let fila = 0; fila < personal_inv.length; fila++){
                     const celdasFilas = personal_inv[fila].split(',');
                     if(celdasFilas[2] == codigo) {
-                        const name_formal = celdasFilas[1]
-                        const num_asientos = "Reservamos "+celdasFilas[3]
+                        const name_formal = celdasFilas[1];
+                        const num_asientos = "Reservamos "+celdasFilas[3];
                         if(celdasFilas[3] == "1"){
-                            num_asientos = num_asientos+" lugar para ti"
+                            num_asientos = num_asientos+" lugar para ti";
                         } else {
-                            num_asientos = num_asientos+" lugares para ti"
+                            num_asientos = num_asientos+" lugares para ti";
                         }
                         console.log(name_formal,num_asientos);
                         document.getElementById("nombre_formal_dev").innerHTML = name_formal;
