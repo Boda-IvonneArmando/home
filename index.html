@@ -13975,7 +13975,7 @@ n_invitacion,nombre_formal,contrasena,n_pases
                 console.log(personal_inv);
                 for (let fila = 0; fila < personal_inv.length; fila++){
                     const celdasFilas = personal_inv[fila].split(',');
-                    console.log(celdasFilas[2],codigo,celdasFilas[2] == codigo,celdasFilas[2].toString() == codigo.toString());
+                    console.log(celdasFilas[2],codigo,celdasFilas[2] == codigo);
                     if(celdasFilas[2] == codigo) {
                         console.log('encontrado');
                         console.log(celdasFilas[0]);
