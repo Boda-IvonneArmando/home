@@ -13799,7 +13799,10 @@
                                 <div class="animated" style="width:100%;height:100%;animation:breathe-LEFT-396c240f-d611-4e24-97f8-0a8959a0dbf1 0ms 0ms both paused;">
                                     <div id="xyQCOlgMD8GYbipD" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
                                         <p id="C4OUM5SnglbsVJ6m" style="color:#8a95a0;font-family:YAEEKKQrAAg-0;line-height:0.99670941em;text-align:center;text-transform:none;letter-spacing:0.025em;">
-                                            <span id="K57Ro9Hondk8PShr" style="color:#8a95a0;">Reservamos #N/A lugares para ti</span>
+                                            <span id="nombre_formal_dev" style="color:#8a95a0;font-size:calc(0.67308683em - var(--ffsd));"></span><br>
+                                            <span id="K57Ro9Hondk8PShr" style="color:#8a95a0;">Reservamos</span> 
+                                            <span id="numero_asientos_dev" style="color:#8a95a0;"></span> 
+                                            <span>lugares para ti</span>
                                             <br>
                                         </p>
                                     </div>
@@ -13961,7 +13964,6 @@
                 const paramURL = window.location.search
                 const patametrosURL = new URLSearchParams(paramURL);
                 const codigo = patametrosURL.get('cod');
-                console.log(codigo);
 
                 const BD = `
 n_invitacion,nombre_formal,contrasena,n_pases
@@ -13969,21 +13971,17 @@ n_invitacion,nombre_formal,contrasena,n_pases
 2,Fam. Muñoz González,FMG,2
 3,Sr. Carlos González Rios,CGR,2
 `
-                console.log(BD)
 
                 const personal_inv = BD.split(/\r?\n|\r/);
-                console.log(personal_inv);
                 for (let fila = 0; fila < personal_inv.length; fila++){
                     const celdasFilas = personal_inv[fila].split(',');
-                    console.log(celdasFilas[2],codigo,celdasFilas[2] == codigo);
                     if(celdasFilas[2] == codigo) {
-                        console.log('encontrado');
-                        console.log(celdasFilas[0]);
-                        console.log(celdasFilas[1]);
-                        console.log(celdasFilas[2]);
-                        console.log(celdasFilas[3]);
+                        const name_formal = celdasFilas[1]
+                        const num_asientos = celdasFilas[3]
+                        console.log(name_formal,num_asientos);
+                        document.getElementById("nombre_formal_dev").innerHTML = name_formal;
+                        document.getElementById("numero_asientos_dev").innerHTML = num_asientos;
                     } else {}
-                    console.log(celdasFilas);
                 }
                 
                 
