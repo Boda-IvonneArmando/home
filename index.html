@@ -13970,6 +13970,19 @@ n_invitacion,nombre_formal,contrasena,n_pases
 3,Sr. Carlos González Rios,CGR,2
 `
                 console.log(BD)
+
+                const personal_inv = BD.split(/\r?\n|\r/);
+                for (let fila = 0; fila < personal_inv.length; fila++){
+                    const celdasFilas = personal_inv[fila].split(',');
+                    console.log(celdasFilas[2]);
+                    if(celdasFilas[2] == codigo) {
+                        console.log(celdasFilas[0]);
+                        console.log(celdasFilas[1]);
+                        console.log(celdasFilas[2]);
+                        console.log(celdasFilas[3]);
+                    }
+                }
+                
                 
             </script>
             <script src="js/a7bdac05b24347a77bc2ba39247eaaf9c12b11b8b5b7c8ffcd473c8cd1f4ef7d.js" async="" nonce="a3cc5640-c6f6-4848-aa11-a963234f5ba2"></script>
