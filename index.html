@@ -14068,7 +14068,7 @@ n_invitacion,nombre_formal,contrasena,n_pases
                     const celdasFilas = personal_inv[fila].split(',');
                     if(celdasFilas[2] == codigo) {
                         const name_formal = celdasFilas[1];
-                        const num_asientos = "Reservamos "+celdasFilas[3];
+                        var num_asientos = "Reservamos "+celdasFilas[3];
                         if(celdasFilas[3] == "1"){
                             num_asientos = num_asientos+" lugar para ti";
                         } else {
