@@ -13800,9 +13800,7 @@
                                     <div id="xyQCOlgMD8GYbipD" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
                                         <p id="C4OUM5SnglbsVJ6m" style="color:#8a95a0;font-family:YAEEKKQrAAg-0;line-height:0.99670941em;text-align:center;text-transform:none;letter-spacing:0.025em;">
                                             <span id="nombre_formal_dev" style="color:#8a95a0;font-size:calc(0.67308683em - var(--ffsd));"></span><br>
-                                            <span id="K57Ro9Hondk8PShr" style="color:#8a95a0;">Reservamos</span> 
-                                            <span id="numero_asientos_dev" style="color:#8a95a0;"></span> 
-                                            <span>lugares para ti</span>
+                                            <span id="numero_asientos_dev" style="color:#8a95a0;"></span>
                                             <br>
                                         </p>
                                     </div>
@@ -13971,19 +13969,23 @@ n_invitacion,nombre_formal,contrasena,n_pases
 2,Fam. Muñoz González,FMG,2
 3,Sr. Carlos González Rios,CGR,2
 `
-
+                const encontrado = false;
                 const personal_inv = BD.split(/\r?\n|\r/);
                 for (let fila = 0; fila < personal_inv.length; fila++){
                     const celdasFilas = personal_inv[fila].split(',');
                     if(celdasFilas[2] == codigo) {
                         const name_formal = celdasFilas[1]
-                        const num_asientos = celdasFilas[3]
+                        const num_asientos = "Reservamos"+celdasFilas[3]+" lugares para ti"
                         console.log(name_formal,num_asientos);
                         document.getElementById("nombre_formal_dev").innerHTML = name_formal;
                         document.getElementById("numero_asientos_dev").innerHTML = num_asientos;
+                        econtrado = true;
                     } else {}
                 }
-                
+                if(!econtrado){
+                    document.getElementById("nombre_formal_dev").innerHTML = "Codigo de invitacion no encotrado.";
+                    document.getElementById("numero_asientos_dev").innerHTML = "Regrese al inicio e ingrese su codigo";
+                }
                 
             </script>
             <script src="js/a7bdac05b24347a77bc2ba39247eaaf9c12b11b8b5b7c8ffcd473c8cd1f4ef7d.js" async="" nonce="a3cc5640-c6f6-4848-aa11-a963234f5ba2"></script>
