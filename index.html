@@ -13975,13 +13975,14 @@ n_invitacion,nombre_formal,contrasena,n_pases
                 console.log(personal_inv);
                 for (let fila = 0; fila < personal_inv.length; fila++){
                     const celdasFilas = personal_inv[fila].split(',');
-                    console.log(celdasFilas);
                     if(celdasFilas[2] == codigo) {
+                        console.log('encontrado');
                         console.log(celdasFilas[0]);
                         console.log(celdasFilas[1]);
                         console.log(celdasFilas[2]);
                         console.log(celdasFilas[3]);
-                    }
+                    } else {}
+                    console.log(celdasFilas);
                 }
                 
                 
