@@ -13813,8 +13813,8 @@
                         </div>
 
                         
-                        <label for="pases" style="font-size: large;color:#000000;font-family:YAFdJnPX3ZE-0;line-height:1.4em;text-align:center;text-transform:none;letter-spacing:0em;">Confirmo la asistencia para </label>
-                            <select onchange="npases_confirm" id="pases" name="pases" style="font-size: large;color:#000000;font-family:YAFdJnPX3ZE-0;line-height:1.4em;text-align:center;text-transform:none;letter-spacing:0em;">
+                        <label for="pases-v" style="font-size: large;color:#000000;font-family:YAFdJnPX3ZE-0;line-height:1.4em;text-align:center;text-transform:none;letter-spacing:0em;">Confirmo la asistencia para </label>
+                            <select onchange="npases_confirm" id="pases-v" name="pases" style="font-size: large;color:#000000;font-family:YAFdJnPX3ZE-0;line-height:1.4em;text-align:center;text-transform:none;letter-spacing:0em;">
                                 <option value="0" selected="">0 personas</option>
                                 <option value="1">1 personas</option>
                                 <option value="2">2 personas</option>
@@ -14054,7 +14054,7 @@ n_invitacion,nombre_formal,contrasena,n_pases
                 console.log(ninvitacion,nombreformal,contrasena,npases)
                 
                 function npases_confirm() {
-                    confirmados = document.getElementById("pases")
+                    confirmados = document.getElementById("pases-v").value
                     console.log(confirmados)
                   }
 
