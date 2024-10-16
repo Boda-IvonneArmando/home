@@ -14020,7 +14020,7 @@ n_invitacion,nombre_formal,contrasena,n_pases
                 var nombreformal;
                 var contrasena;
                 var npases;
-                var confirmados;
+                var confirmados = "0";
                 
                 var encontrado = false;
                 var personal_inv = BD.split(/\r?\n|\r/);
@@ -14054,8 +14054,8 @@ n_invitacion,nombre_formal,contrasena,n_pases
                 console.log(ninvitacion,nombreformal,contrasena,npases)
                 
                 function npases_confirm() {
-                    confirmados = document.getElementById("pases-v").value
-                    console.log(confirmados)
+                    confirmados = document.getElementById("pases-v").value;
+                    console.log(confirmados);
                   }
 
                 function confirmar(){
