@@ -14078,6 +14078,7 @@ n_invitacion,nombre_formal,contrasena,n_pases
                                };
 
                     fetch("https://script.google.com/macros/s/AKfycbxBf1IdtgV4a1KhCmbJMfSUzy1SKT6YS6XQKLINaCUgzhJn2zDp9h-pnq9xuYncYHE/exec", {
+                      mode:  'no-cors',
                       method: "POST",
                       headers: {'Content-Type': 'application/json'}, 
                       body: JSON.stringify(data)
