@@ -13818,7 +13818,7 @@
                                 <option value="0" selected="">0 personas</option>
                             </select>
                         <input onclick="confirmar()" id="confirmar-button" type="button" class="normal" name="Name" value="Click para Confirmar" style="width: 100%;padding: 20px 30px;margin: 8px 0;display: inline-block;border: 1px solid #ccc;border-radius: 4px;box-sizing: border-box;FONT-SIZE: large;background-color: #ec709a;color: #fff;font-family: YACgEcnnqB4-0;">
-                        
+                        <span id="msg-confirm" style="font-size: calc(3em - var(--ffsd));color:#000000;font-family:YAFdJnPX3ZE-0;line-height:1.4em;text-align: center;text-transform:none;letter-spacing:0em;"></span>
                     </div>
                 </div>
             </section>
@@ -14078,11 +14078,7 @@ url = "https://script.google.com/macros/s/AKfycbxBf1IdtgV4a1KhCmbJMfSUzy1SKT6YS6
                       headers: {'Content-Type': 'application/json'}, 
                       body: JSON.stringify({})
                     }).then(res => {
-                        if(res == 200){
-                            console.log("Request complete! response:", res);
-                        } else{
-                            console.log("BAD response:", res);
-                        }
+                        document.getElementById("msg-confirm").innerHTML = "Se confirmo asistencia correctamente"
                     });
                     //https://script.google.com/macros/s/AKfycbxBf1IdtgV4a1KhCmbJMfSUzy1SKT6YS6XQKLINaCUgzhJn2zDp9h-pnq9xuYncYHE/exec?ninvitacion=1&nombreformal=Sr. Eduardo Muñoz y Srta. Lourdes Romero	&contrasena=LYL&npases=2&confirmados=2&hoy=2024-10-16T05:39:03.710Z
                     //https://script.google.com/macros/s/AKfycbxBf1IdtgV4a1KhCmbJMfSUzy1SKT6YS6XQKLINaCUgzhJn2zDp9h-pnq9xuYncYHE/exec
