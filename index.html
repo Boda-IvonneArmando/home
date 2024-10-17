@@ -14054,7 +14054,7 @@ n_invitacion,nombre_formal,contrasena,n_pases
                 if(!encontrado || codigo === null || codigo === undefined){
                     document.getElementById("nombre_formal_dev").innerHTML = "Codigo de invitacion no encotrado.";
                     document.getElementById("numero_asientos_dev").innerHTML = "Regrese al inicio e ingrese su codigo.";
-                    document.getElementById("confirmar-button").innerHTML = "No puedes confirmar asistencia";
+                    document.getElementById("confirmar-button").value = "No puedes confirmar asistencia";
                     document.getElementById("confirmar-button").onclick = function() {};
                 }
 
