@@ -14070,23 +14070,15 @@ n_invitacion,nombre_formal,contrasena,n_pases
                     const hoy = new Date().toISOString();
                     console.log(ninvitacion,nombreformal,contrasena,npases,confirmados,hoy);
 
-                    infoexcel = {
-                                ninvitacion: ninvitacion,
-                                nombreformal: nombreformal,
-                                contrasena: contrasena,
-                                npases: npases,
-                                confirmados: confirmados,
-                                hoy: hoy
-                               };
+                    infoexcel = {ninvitacion: ''+ninvitacion,nombreformal: ''+nombreformal,contrasena: ''+contrasena,npases: ''+npases,confirmados: ''+confirmados,hoy: ''+hoy};
 
-                    var datax = new FormData();
-                    datax.append( "json", JSON.stringify( infoexcel ) );
+                    
 
                     fetch("https://script.google.com/macros/s/AKfycbxBf1IdtgV4a1KhCmbJMfSUzy1SKT6YS6XQKLINaCUgzhJn2zDp9h-pnq9xuYncYHE/exec", {
                       mode:  'no-cors',
                       method: "POST",
                       headers: {'Content-Type': 'application/json'}, 
-                      body: datax
+                      body: JSON.stringify({ninvitacion: ''+ninvitacion,nombreformal: ''+nombreformal,contrasena: ''+contrasena,npases: ''+npases,confirmados: ''+confirmados,hoy: ''+hoy})
                     }).then(res => {
                         if(res == 200){
                             console.log("Request complete! response:", res);
