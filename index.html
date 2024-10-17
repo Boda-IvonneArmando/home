@@ -14017,6 +14017,8 @@ n_invitacion,nombre_formal,contrasena,n_pases
                 var contrasena;
                 var npases;
                 var confirmados = "0";
+                
+                var infoexcel;
 
                 const sel = document.getElementById("pases-v");
                 
@@ -14068,7 +14070,7 @@ n_invitacion,nombre_formal,contrasena,n_pases
                     const hoy = new Date().toISOString();
                     console.log(ninvitacion,nombreformal,contrasena,npases,confirmados,hoy);
 
-                    let data = {
+                    infoexcel = {
                                 ninvitacion: ninvitacion,
                                 nombreformal: nombreformal,
                                 contrasena: contrasena,
@@ -14081,7 +14083,7 @@ n_invitacion,nombre_formal,contrasena,n_pases
                       mode:  'no-cors',
                       method: "POST",
                       headers: {'Content-Type': 'application/json'}, 
-                      body: JSON.stringify(data)
+                      body: JSON.stringify(infoexcel)
                     }).then(res => {
                         if(res == 200){
                             console.log("Request complete! response:", res);
