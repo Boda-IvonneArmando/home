@@ -14045,8 +14045,8 @@ n_invitacion,nombre_formal,contrasena,n_pases
                         
                         for(let v = 1; v <= +npases; v++){
                             opt.value = v..toString();
-                            opt.text = v..toString()+" personas"
-                            sel.appendChild(opt)
+                            opt.text = v..toString()+" personas";
+                            sel.appendChild(opt);
                         }
                         
                         encontrado = true;
@@ -14060,7 +14060,7 @@ n_invitacion,nombre_formal,contrasena,n_pases
                     document.getElementById("confirmar-button").onclick = function() {};
                 }
 
-                console.log(ninvitacion,nombreformal,contrasena,npases)
+                console.log(ninvitacion,nombreformal,contrasena,npases);
                 
                 function npases_confirm() {
                     confirmados = document.getElementById("pases-v").value;
