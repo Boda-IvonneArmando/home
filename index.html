@@ -14067,13 +14067,27 @@ n_invitacion,nombre_formal,contrasena,n_pases
                 function confirmar(){
                     const hoy = new Date().toISOString();
                     console.log(ninvitacion,nombreformal,contrasena,npases,confirmados,hoy);
-                    //var xhr = new XMLHttpRequest();
-                    //xhr.open("POST", yourUrl, true);
-                    //xhr.setRequestHeader('Content-Type', 'application/json');
-                    //xhr.send(JSON.stringify({
-                    //    value: value
-                    //}));
-                    
+
+                    let data = {
+                                ninvitacion: ninvitacion,
+                                nombreformal: nombreformal,
+                                contrasena: contrasena,
+                                npases: npases,
+                                confirmados: confirmados,
+                                hoy: hoy
+                               };
+
+                    fetch("https://script.google.com/macros/s/AKfycbxBf1IdtgV4a1KhCmbJMfSUzy1SKT6YS6XQKLINaCUgzhJn2zDp9h-pnq9xuYncYHE/exec", {
+                      method: "POST",
+                      headers: {'Content-Type': 'application/json'}, 
+                      body: JSON.stringify(data)
+                    }).then(res => {
+                        if(res == 200){
+                            console.log("Request complete! response:", res);
+                        } else{
+                            console.log("BAD response:", res);
+                        }
+                    });
                     //https://script.google.com/macros/s/AKfycbxBf1IdtgV4a1KhCmbJMfSUzy1SKT6YS6XQKLINaCUgzhJn2zDp9h-pnq9xuYncYHE/exec?ninvitacion=1&nombreformal=Sr. Eduardo Muñoz y Srta. Lourdes Romero	&contrasena=LYL&npases=2&confirmados=2&hoy=2024-10-16T05:39:03.710Z
                     //https://script.google.com/macros/s/AKfycbxBf1IdtgV4a1KhCmbJMfSUzy1SKT6YS6XQKLINaCUgzhJn2zDp9h-pnq9xuYncYHE/exec
                 }
